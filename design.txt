@@ -1,0 +1,103 @@
+Hey, Welcome to the Design File (What is the Syntax & everything)!
+
+So first, what kind of language we are dealing with?
+	A language of the C familly, basically the most common syntax.
+Type of compilance?
+	Source -> Runnable Executable File
+Type of language?
+	High Level and Low Level (optionnal for the low level), Curly-bracket Language, Object oriented programming.
+		- It is imperative (e.g. Python), not functionnal (e.g. Haskell)
+Target platform / Operating System?
+	Anyone that supports the output binary file (Windows, OSX, Unix (maybe), Linux), on PC Machines.
+Is turring complete (Can do anything)?
+	Yes.
+
+
+
+Syntax Example?
+
+
+
+
+	int a = 50 //(type) (name) = (value, must be constant and not a formula)
+	int a = math(2 * 50) //(type) (name) = (math formula, using the math keyword)
+	string myString = "Hello, World!" //No ';' character at end of lines, an instruction per line
+
+
+
+	say(myString) //Print
+	myString //Will also print
+
+
+
+	string console_input = get() //Get console input using the method get().
+	string console_input = get //No parameters, no parenthesis required.
+	
+	//Now let's get in the method syntax
+	int Main() //Yes, integer return type for Main(). Don't need to return anything for Main
+	{
+		int a = 30
+		int b = 64
+		int c = 32
+
+
+
+		int d = math(math(a * b) * c) //Yes, you can stack math() statements. Actually, math() is a value so
+		string hello = "Hello, World!\n" //Store an string of characters with a EOL (End of line) escape character
+
+
+
+		say(hello) //Write 'hello'
+		say(d) //Writes the value of 'd'
+
+
+
+		//Alternativally
+		say(cat(hello, d)) //Appends hello with d's value and prints it. 'cat' appends.
+
+
+
+		//Even further
+		hello = cat(hello, d)
+		say(hello)
+	}
+
+
+
+So, not lost? 'math()' and 'cat()' can be confusing. But to keep our language simple, that's the way we are going to do this.
+
+But actually, there is more than just 'math()' and 'cat()':
+	- represent, parses the string or character into a integer. Dollar signs are accepted.
+		int a = represent("432")
+		float b = represent("543.32321")
+		double c = represent("433.78")
+	- represent for booleans and characters (strings only)
+		bool d = represent("true")
+		char newline = represent("\n")
+		char e = represent("r")
+	- represent for strings, yes (instead of using for example in C# ToString())
+		string f = represent(c)
+	- cmp for strings, which takes an array of strings, remove 'sentinels' and combine them into a string.
+		string[] myArray = {"Hello", " ", "World!"}
+		string g = cmp(myArray)
+		//g now equals "Hello World!"
+	- split for strings, splits the string into an array by the inserted character.
+		string[] h = split(g, ' ')
+		//h now equals {"Hello", "World!"}
+	- index for arrays in general, return the index of the matching element of the array.
+		int i = index(h, "World!")
+		//i equals 1, because computers start counting at 0
+	- match for arrays, return true or false depending if the array contains the matching element.
+		bool j = match(h, "haha")
+		//j equals false, because "haha" doesn't exist in 'h'
+	- trim for strings, remove spaces from string.
+		string g = trim(g)
+		//g now equals "HelloWorld!"
+		/*New line (\n), tabulations (\t & \v) and carriage return (\r, a thing that existed back in the typewritters). Null (\0) also works, unless it is
+			at the end of the string where it does it job of 'sentinel'.*/
+And for now that's all.
+
+
+
+
+
