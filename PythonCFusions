@@ -1,3 +1,8 @@
 Ideas for command style:
 PythonC (Default plan)
-Minecraft styled commands (Molang)
+Minecraft styled commands (Gamer friendly)
+
+Minecraft examples:
+/print (message)
+//sudo apt-get (string) <-(I got inspired by terminal)
+/variable create,edit,delete (name)
